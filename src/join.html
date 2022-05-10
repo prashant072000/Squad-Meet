@@ -84,14 +84,47 @@
                 </div>
 
                 <div class="col-12 col-md-4 offset-md-4 mb-3">
-                    <label for="username">Your Name</label>
-                    <input type="text" id='username' class="form-control rounded-0" placeholder="Your Name">
+                    <label for="roomname">Room Name</label>
+                    <input type="text" id='roomname' class="form-control rounded-0" placeholder="Room Name">
                 </div>
 
                 <div class="col-12 col-md-4 offset-md-4 mb-3">
-                    <button id='enter-room' class="btn btn-block rounded-0 btn-info">Enter Room</button>
+                    <label for="roomid">Room Id</label>
+                    <input type="text" id='roomid' class="form-control rounded-0" placeholder="Room Id">
+                </div>
+
+                <div class="col-12 col-md-4 offset-md-4 mb-3">
+                    <a  id='enter-room1' href="" class="btn btn-info btn-block">Click here to join</a>
                 </div>
             </div>
         </div>
+        <script>
+        document.getElementById( 'enter-room1' ).addEventListener( 'click', ( e ) => {
+        e.preventDefault();
+
+        let Roomname = document.querySelector( '#roomname' ).value;
+        let RoomID = document.querySelector('#roomid').value;
+        let link = document.getElementById('enter-room1');
+        if ( Roomname && RoomID) {
+            //remove error message, if any
+            document.querySelector('#err-msg-username').innerText = "";
+
+            //save the user's name in sessionStorage
+            sessionStorage.setItem( 'roomname', Roomname );
+            sessionStorage.setItem( 'roomid', RoomID );
+
+            let roomLink = `${ location.origin }/index.html?room=${ Roomname.trim().replace( ' ', '_' ) }_${ RoomID };`
+            console.log(roomLink)
+            //reload room
+            //location.reload();
+            console.log(link)
+            window.location.replace(`${roomLink}`);
+        }
+
+        else {
+            document.querySelector('#err-msg-username').innerText = "Please input Room name & Room ID";
+        }
+    } );
+        </script>
     </body>
 </html>
