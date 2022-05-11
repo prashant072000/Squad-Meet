@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Multi-User Video Call</title>
+        <title>Squad Meet</title>
 
         <meta content="width=device-width, initial-scale=1" name="viewport" />
 
@@ -19,7 +19,7 @@
         <script src='assets/js/autolink.js'></script>
     </head>
 
-    <body>
+    <body style="background-color:rgb(53, 51, 78)">
         <div class="custom-modal" id='recording-options-modal'>
             <div class="custom-modal-content">
                 <div class="row text-center">
@@ -41,7 +41,7 @@
         
         
         <nav class="navbar fixed-top bg-info rounded-0 d-print-none">
-            <div class="text-white">Video Call</div>
+            <div class="text-white"><img src="https://www.freeiconspng.com/uploads/video-camera-icon-18.png" width="40px" height="40px">&nbsp; Squad Conference</div>
 
             <div class="pull-right room-comm" hidden>
                 <span class="text-white mr-5">
@@ -64,13 +64,11 @@
                     <i class="fa fa-dot-circle text-white"></i>
                 </button>
 
-                <button class="btn btn-sm text-white pull-right btn-no-effect" id='toggle-chat-pane'>
-                    <i class="fa fa-comment"></i> <span class="badge badge-danger very-small font-weight-lighter" id='new-chat-notification' hidden>New</span>
+                <button class="btn btn-sm text-white pull-right btn-no-effect" id='toggle-chat-pane' >
+                    <i class="fa fa-comment-alt"></i> <span class="badge badge-danger very-small font-weight-darker" id='new-chat-notification' hidden>New</span>
                 </button>
 
-                <button class="btn btn-sm rounded-0 btn-no-effect text-white">
-                    <a href="/" class="text-white text-decoration-none"><i class="fa fa-sign-out-alt text-white" title="Leave"></i></a>
-                </button>
+                <a class="imglink" href="/"><button id = "leave">Leave Meeting</Button></a>
             </div>
         </nav>
 
@@ -104,12 +102,12 @@
 
 
 
-        <div class="container-fluid" id='username-set' hidden>
+        <div class="container-fluid" id='username-set' hidden style="background-color:white;">
             <div class="row">
                 <div class="col-12 h4 mt-5 text-center">Your Name</div>
             </div>
             
-            <div class="row mt-2">
+            <div class="row mt-2" >
                 <div class="col-12 text-center">
                     <span class="form-text small text-danger" id='err-msg-username'></span>
                 </div>

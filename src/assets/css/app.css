@@ -183,6 +183,60 @@
     width: 80%;
 }
 
+#leave{
+    background-color: red;
+    color: White;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    border: 1.5px solid red;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+}
+
+#toggle-chat-pane{
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#record{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#share-screen{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#toggle-mute{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#toggle-video{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#record-video{
+    background-color: aqua;
+    font-weight: bold;
+
+}
+
+#record-screen{
+    background-color: aqua;
+    font-weight: bold;
+    
+}
+
+#closeModal{
+    background-color: red;
+    font-weight: bold;
+    color: white;
+}
 
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
