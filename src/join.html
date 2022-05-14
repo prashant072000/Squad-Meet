@@ -114,11 +114,17 @@
             sessionStorage.setItem( 'roomid', RoomID );
 
             let roomLink = `${ location.origin }/index.html?room=${ Roomname.trim().replace( ' ', '_' ) }_${ RoomID };`
-            console.log(roomLink)
+            let RoomName = localStorage.getItem("roomname");
+            let RoomCode = localStorage.getItem("roomCode");
             //reload room
             //location.reload();
-            console.log(link)
-            window.location.replace(`${roomLink}`);
+            if((RoomName===Roomname) && (RoomCode === RoomID)){
+                window.location.replace(`${roomLink}`);
+                
+            }
+            else{
+                alert("j");
+            }
         }
 
         else {

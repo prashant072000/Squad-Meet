@@ -47,29 +47,6 @@
                 <span class="text-white mr-5">
                     Unique Identifier: <span id='randomNumber'></span>
                 </span>
-
-                <button class="btn btn-sm rounded-0 btn-no-effect" id='toggle-video' title="Hide Video">
-                    <i class="fa fa-video text-white"></i>
-                </button>
-
-                <button class="btn btn-sm rounded-0 btn-no-effect" id='toggle-mute' title="Mute">
-                    <i class="fa fa-microphone-alt text-white"></i>
-                </button>
-
-                <button class="btn btn-sm rounded-0 btn-no-effect" id='share-screen' title="Share screen">
-                    <i class="fa fa-desktop text-white"></i>
-                </button>
-
-                <button class="btn btn-sm rounded-0 btn-no-effect" id='record' title="Record">
-                    <i class="fa fa-dot-circle text-white"></i>
-                </button>
-
-                <button class="btn btn-sm text-white pull-right btn-no-effect" id='toggle-chat-pane' >
-                    <i class="fa fa-comment-alt"></i> <span class="badge badge-danger very-small font-weight-darker" id='new-chat-notification' hidden>New</span>
-                </button>
-
-                <a class="imglink" href="/"><button id = "leave">Leave Meeting</Button></a>
-            </div>
         </nav>
 
         <div class="container-fluid" id='room-create' hidden>
@@ -148,5 +125,33 @@
                 </div>
             </div>
         </div>
+
+        <nav class="navbar fixed-bottom bg-info rounded-0 d-print-none">
+
+            <div class="pull-right room-comm" hidden>
+
+                <button class="btn btn-sm rounded-0 btn-no-effect" id='toggle-video' title="Hide Video">
+                    <i class="fa fa-video text-white"></i>
+                </button>
+
+                <button class="btn btn-sm rounded-0 btn-no-effect" id='toggle-mute' title="Mute">
+                    <i class="fa fa-microphone-alt text-white"></i>
+                </button>
+
+                <button class="btn btn-sm rounded-0 btn-no-effect" id='share-screen' title="Share screen">
+                    <i class="fa fa-desktop text-white"></i>
+                </button>
+
+                <button class="btn btn-sm rounded-0 btn-no-effect" id='record' title="Record">
+                    <i class="fa fa-dot-circle text-white"></i>
+                </button>
+
+                <button class="btn btn-sm text-white pull-right btn-no-effect" id='toggle-chat-pane' >
+                    <i class="fa fa-comment-alt"></i> <span class="badge badge-danger very-small font-weight-darker" id='new-chat-notification' hidden>New</span>
+                </button>
+
+                <a class="imglink" href="/"><button id = "leave">Leave Meeting</Button></a>
+            </div>
+        </nav>
     </body>
 </html>

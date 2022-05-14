@@ -109,7 +109,7 @@
 
 
 .sender-info{
-    font-size: smaller;
+    font-size: small;
     margin-top: 5px;
     align-self: flex-end;
 }
@@ -117,7 +117,7 @@
 
 .msg{
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     color: black;
     background-color: wheat;
 }
@@ -127,6 +127,13 @@
     border-radius: 6px;
 }
 
+#chat-pane{
+    width: 340px;
+}
+#chat-input{
+    margin-bottom:70px;
+    height: 50px;
+}
 
 .btn-no-effect:focus{
     box-shadow: none;
@@ -136,6 +143,25 @@
     font-size: 6px !important;
 }
 
+#local{
+    margin-bottom: 65px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.card-sm{
+    padding: 8px;
+    border: 2px solid;
+    background-color:black;
+    background-clip: padding-box;
+}
+#videos{
+    width: 720px;;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    border-radius: 30px;
+}
 
 #close-single-peer-btn {
     position: fixed;
@@ -188,7 +214,7 @@
     color: White;
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
-    border: 1.5px solid red;
+    border: 1.5px solid white;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 10px;
@@ -196,28 +222,28 @@
 
 #toggle-chat-pane{
     font-size: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #record{
     font-size: 20px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 #share-screen{
     font-size: 20px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 #toggle-mute{
     font-size: 20px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 #toggle-video{
     font-size: 20px;
-    margin-left: 10px;
+    margin-left: 510px;
 }
 
 #record-video{

@@ -63,9 +63,14 @@ window.addEventListener( 'load', () => {
             //save the user's name in sessionStorage
             sessionStorage.setItem( 'username', yourName );
 
+            localStorage.setItem("username",yourName);
+            localStorage.setItem("roomname",roomName);
+            //localStorage.setItem("roomCode", roomCode);
+
             //create room link
-            //let roomLink = `${ location.origin }?room=${ roomName.trim().replace( ' ', '_' ) }_${ helpers.generateRandomString() }`;
-            let roomLink = `${ location.origin }/index.html?room=${ roomName.trim().replace( ' ', '_' ) }_${ helpers.generateRandomString() };`
+            let roomCode = helpers.generateRandomString()[0];
+            let roomLink = `${ location.origin }/index.html?room=${ roomName.trim().replace( ' ', '_' ) }_${roomCode};`
+            localStorage.setItem("roomCode", roomCode);
             //show message with link to room
             document.querySelector( '#room-created' ).innerHTML = `Room successfully created. Click <a href='${ roomLink }'>here</a> to enter room. 
                 Share the room link with your partners.`;
