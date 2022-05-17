@@ -72,12 +72,31 @@ window.addEventListener( 'load', () => {
             let roomLink = `${ location.origin }/index.html?room=${ roomName.trim().replace( ' ', '_' ) }_${roomCode};`
             localStorage.setItem("roomCode", roomCode);
             //show message with link to room
-            document.querySelector( '#room-created' ).innerHTML = `Room successfully created. Click <a href='${ roomLink }'>here</a> to enter room. 
-                Share the room link with your partners.`;
+            document.querySelector( '#room-created' ).innerHTML = `
+            <div class="alert alert-success fade show text-center" role="alert">
+                <strong><h3>Room created succesfully!!</h3></strong>
+                <p>Click <a href='${ roomLink }'>here</a> to enter room.</p>
+            </div> 
+                <div class="copy-to-clipboard-container">
+                    <div class="copy-to-clipboard-label">
+                        Joining Link
+                    </div>
+                    <div class="copy-to-clipboard-text">
+                        <input type="text" id="text" value=${roomLink} />
+                        <button id="copy-text-btn"><i class="fa fa-solid fa-clone"></i></button>
+                    </div>
+                </div>`;
 
             //empty the values
             document.querySelector( '#room-name' ).value = '';
             document.querySelector( '#your-name' ).value = '';
+
+            let copyLinkInput = document.querySelector("#text")
+            document.querySelector("#copy-text-btn").addEventListener("click", function () {
+                copyLinkInput.select();
+                navigator.clipboard.writeText(copyLinkInput.value);
+                alert("Text Copied")
+            })
         }
 
         else {

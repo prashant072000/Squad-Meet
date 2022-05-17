@@ -44,9 +44,13 @@
             <div class="text-white"><img src="https://www.freeiconspng.com/uploads/video-camera-icon-18.png" width="40px" height="40px">&nbsp; Squad Conference</div>
 
             <div class="pull-right room-comm" hidden>
-                <span class="text-white mr-5">
+                <!--<span class="text-white mr-5">
                     Unique Identifier: <span id='randomNumber'></span>
-                </span>
+                </span>-->
+
+                <button class="btn btn-sm rounded-0 btn-no-effect" id='record' title="Record">
+                    <img class="recording" src="https://cdn-icons-png.flaticon.com/512/3998/3998038.png" width="40vh" height="40vh"> 
+                </button>
         </nav>
 
         <div class="container-fluid" id='room-create' hidden>
@@ -112,23 +116,22 @@
                     <div class="row mt-2 mb-2" id='videos'></div>
                 </div>
 
-                <div class="col-md-3 chat-col d-print-none mb-2 bg-info" id='chat-pane' hidden>
+                <div class="col-md-3 chat-col d-print-none mb-2 " id='chat-pane' hidden>
                     <div class="row">
-                        <div class="col-12 text-center h2 mb-3">CHAT</div>
+                        <div class="col-12 text-center h5 mb-3">In call messages</div>
                     </div>
 
                     <div id='chat-messages'></div>
 
                     <div class="row">
-                        <textarea id='chat-input' class="form-control rounded-0 chat-box border-info" rows='3' placeholder="Type here..."></textarea>
+                        <input id='chat-input' class="form-control chat-box border-info" rows='3' placeholder="Type here..."></input>
                     </div>
                 </div>
             </div>
         </div>
 
-        <nav class="navbar fixed-bottom bg-info rounded-0 d-print-none">
-
-            <div class="pull-right room-comm" hidden>
+        <div id="new-bar">
+            <div class="pull-right room-comm" id="button-box" hidden>
 
                 <button class="btn btn-sm rounded-0 btn-no-effect" id='toggle-video' title="Hide Video">
                     <i class="fa fa-video text-white"></i>
@@ -138,20 +141,17 @@
                     <i class="fa fa-microphone-alt text-white"></i>
                 </button>
 
+                <a class="imglink" href="/"><img id="leave" src="https://vectorified.com/images/hang-up-icon-11.png" width="50vh"></a>
+
                 <button class="btn btn-sm rounded-0 btn-no-effect" id='share-screen' title="Share screen">
                     <i class="fa fa-desktop text-white"></i>
-                </button>
-
-                <button class="btn btn-sm rounded-0 btn-no-effect" id='record' title="Record">
-                    <i class="fa fa-dot-circle text-white"></i>
                 </button>
 
                 <button class="btn btn-sm text-white pull-right btn-no-effect" id='toggle-chat-pane' >
                     <i class="fa fa-comment-alt"></i> <span class="badge badge-danger very-small font-weight-darker" id='new-chat-notification' hidden>New</span>
                 </button>
 
-                <a class="imglink" href="/"><button id = "leave">Leave Meeting</Button></a>
             </div>
-        </nav>
+        </div>
     </body>
 </html>

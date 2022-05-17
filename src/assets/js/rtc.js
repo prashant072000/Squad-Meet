@@ -37,7 +37,7 @@ window.addEventListener( 'load', () => {
         socket.on( 'connect', () => {
             //set socketId
             socketId = socket.io.engine.id;
-            document.getElementById('randomNumber').innerText = randomNumber;
+            //document.getElementById('randomNumber').innerText = randomNumber;
 
 
             socket.emit( 'subscribe', {
@@ -118,7 +118,7 @@ window.addEventListener( 'load', () => {
             let data = {
                 room: room,
                 msg: msg,
-                sender: `${username} (${randomNumber})`
+                sender: `${username}`
             };
 
             //emit chat message

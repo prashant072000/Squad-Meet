@@ -42,13 +42,12 @@
     border: 0;
     border-top: 1px groove white;
     border-left: 1px groove white;
-    font-size: small;
+    font-size: medium;
+    font-weight: bold;
 }
 
 .chat-box::placeholder{
-    font-size: small;
-    font-weight: lighter;
-    font-style: italic;
+    font-size: medium;
 }
 
 .chat-box,
@@ -125,14 +124,22 @@
 
 .chat-card{
     border-radius: 6px;
+    margin-top: 1rem;
+    margin-right: 1.2rem;
 }
 
 #chat-pane{
     width: 340px;
+    background-color: #334756;
+    margin-top: 2.5rem;
+}
+#chat-pane.col-md-3.chat-col.d-print-none.mb-2.bg-info.chat-opened{
+    background-color: #fff;
 }
 #chat-input{
     margin-bottom:70px;
     height: 50px;
+    border-radius: 10px;
 }
 
 .btn-no-effect:focus{
@@ -150,9 +157,13 @@
 }
 .card-sm{
     padding: 8px;
-    border: 2px solid;
     background-color:black;
     background-clip: padding-box;
+    border-radius: 30px;
+}
+.remote-video{
+    width: 100%;
+    border-radius: 30px;
 }
 #videos{
     width: 720px;;
@@ -210,40 +221,34 @@
 }
 
 #leave{
-    background-color: red;
-    color: White;
-    font-family:'Times New Roman', Times, serif;
-    font-weight: bold;
-    border: 1.5px solid white;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 10px;
+    margin-left:30px;
+    margin-right: 10px;
 }
 
 #toggle-chat-pane{
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-left: 20px;
     margin-right: 20px;
 }
 
 #record{
-    font-size: 20px;
-    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+    margin-left: 90px;
 }
 
 #share-screen{
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-left: 20px;
 }
 
 #toggle-mute{
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-left: 20px;
 }
 
 #toggle-video{
-    font-size: 20px;
-    margin-left: 510px;
+    font-size: 1.5rem;
 }
 
 #record-video{
@@ -262,6 +267,14 @@
     background-color: red;
     font-weight: bold;
     color: white;
+}
+
+#new-bar{
+    margin-top: 66vh;
+}
+
+#chat-messages{
+    background-color: gray;
 }
 
 @keyframes animatetop {
@@ -290,6 +303,7 @@
     .chat-box{
         bottom: 90px;
         margin-bottom: 0px;
+
     }
     
     .card-sm{
@@ -309,4 +323,42 @@
         width: 50%;
         z-index: 1000;
     }
+}
+
+
+.copy-to-clipboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.copy-to-clipboard-label {
+    margin-bottom: 1rem;
+    font-size: 25px;
+}
+
+.copy-to-clipboard-text {
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+}
+
+.copy-to-clipboard-text input {
+    padding: 5px;
+    color: #555;
+    border: none;
+    outline: none;
+}
+#create-text{
+    margin-top: 5rem;
+}
+
+#button-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
