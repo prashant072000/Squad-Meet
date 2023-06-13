@@ -1,8 +1,8 @@
 {
-  "name": "squad-meet",
-  "version": "1.0.0",
-  "description": "Created Video Conferencing app using Node.js, Express, HTML, CSS, JS, Socket.IO and WebRTC.",
-  "main": "app.js",
+  "name": "livestream-server",
+  "version": "0.0.1",
+  "description": "A conference call implementation using WebRTC, Socket.io and Node.js.",
+  "main": "src/app.js",
   "dependencies": {
     "abbrev": "^1.1.1",
     "accepts": "^1.3.7",
@@ -185,12 +185,20 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirsanni/livestream-server.git"
   },
   "keywords": [
-    "Squad-meet"
+    "LiveStream",
+    "Server"
   ],
-  "author": "Prashant Jha",
-  "license": "ISC"
+  "author": "Amir Sanni <amirsanni@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirsanni/livestream-server/issues"
+  },
+  "homepage": "https://github.com/amirsanni/livestream-server#readme"
 }
